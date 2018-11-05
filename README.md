@@ -3,25 +3,24 @@
 |Column|Type|Options|
 |------|----|-------|
 |body|text|
-|body|string|
-|user_id|integer|null: false, foreign_key: true|
-|group_id|integer|null: false, foreign_key: true|
+|image|string|
+|user_id|integer|null: false, t.references :user|
+|group_id|integer|null: false, t.references :group|
 
 ### Association
 - belongs_to :group
 - belongs_to :user
 
 
-## gruopsテーブル
+## groupsテーブル
 
 |Column|Type|Options|
 |------|----|-------|
-|user_id|integer|null: false, foreign_key: true|
 |messages_id|integer|null: false, foreign_key: true|
 
 ### Association
 - has_many :messages
-- belongs_to :members
+- had_many :members
 
 
 ## usersテーブル
@@ -30,11 +29,9 @@
 |------|----|-------|
 |name|string|
 |e-mail|text|
-|messages_id|integer|null: false, foreign_key: true|
-|group_id|integer|null: false, foreign_key: true|
 
 ### Association
-- belongs_to :members
+- has_many :members
 - has_many :messages
 
 
@@ -43,9 +40,8 @@
 |Column|Type|Options|
 |------|----|-------|
 |user_id|integer|null: false, foreign_key: true|
-|group_id|integer|null: false, foreign_key: true|
+|group_id|integer|null: false, t.references :group|
 
 ### Association
 - belongs_to :group
 - belongs_to :user
-
