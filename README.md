@@ -29,7 +29,7 @@
 |Column|Type|Options|
 |------|----|-------|
 |name|string|
-|e-mail|text|
+|e-mail|string|
 
 ### Association
 - has_many :members
