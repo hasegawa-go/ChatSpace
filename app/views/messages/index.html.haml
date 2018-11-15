@@ -1,0 +1,60 @@
+.notification
+.wrapper
+  .side-bar
+    .side_header
+      %h3.header__name
+        go
+      %ul.header__lists
+        %li.list
+          %a{:href => "/groups/new"}
+            %i.fa.fa-edit.icon
+        %li.list
+          %a{:href => "/users/10842/edit"}
+            %i.fa.fa-cog.icon
+    .groups
+      .group
+        %a{:href => "/g1roups/25932/messages"}
+          .group__name
+            チャットグループ
+          .group__message
+            楽しい
+  .chat
+    .header
+      .left-header
+        .left-header__title
+          チャットグループ
+        %ul.left-header__members
+          %li.member
+          Member：
+          %li.member
+          go
+      .right-header
+        %a.right-header__button{:href => "/groups/25932/edit"} Edit
+    .messages.js-messages
+      .message
+        .upper-message
+          .upper-message__user-name go
+          .upper-message__date 2018/11/05 04:09
+        .lower-message
+          .lower-message__content 涼しい！
+      .message
+        .upper-message
+          .upper-message__user-name go
+          .upper-message__date 2018/11/05 04:09
+        .lower-message
+          .lower-message__content 涼しい！
+      .message
+        .upper-message
+          .upper-message__user-name go
+          .upper-message__date 2018/11/11 06:06
+        .lower-message
+          .lower-message__content 暑い
+    .chat-main__footer
+      %form.chat-main__footer__form
+        %input.message{:placeholder => "type a message"}
+        %label.upload-label{for: "insert-image"}
+          %span.insert-image #{ fa_icon "image"}
+          %input.submit{:type => "file", id: "insert-image"}
+        %input.send_btn{:type => "submit", :value => "SEND"  }
+
+
