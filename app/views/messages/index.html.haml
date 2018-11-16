@@ -1,23 +1,20 @@
 .notification
 .wrapper
   .side-bar
-    .side_header
+    .side__header
       %h3.header__name
         go
-      %ul.header__lists
-        %li.list
-          %a{:href => "/groups/new"}
-            %i.fa.fa-edit.icon
-        %li.list
-          %a{:href => "/users/10842/edit"}
-            %i.fa.fa-cog.icon
+      %ul.side__icons
+        %li.icon
+          = link_to do
+            %i.fas.fa-edit
+        %li.icon
+          = link_to do
+            %i.fas.fa-cog
     .groups
       .group
-        %a{:href => "/g1roups/25932/messages"}
-          .group__name
-            チャットグループ
-          .group__message
-            楽しい
+        .group__name チャットグループ
+        .group__message 楽しい
   .chat
     .header
       .left-header
@@ -28,8 +25,8 @@
           Member：
           %li.member
           go
-      .right-header
-        %a.right-header__button{:href => "/groups/25932/edit"} Edit
+        .right-header
+          %input.right-header__edit_button{:type => "button", :value => "EDIT"}
     .messages.js-messages
       .message
         .upper-message

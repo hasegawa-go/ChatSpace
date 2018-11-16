@@ -2,17 +2,13 @@
   background-color: aqua;
   width: 100%;
   height: 28px;
-  .notice {
-    color: #fff;
-    text-align: center;
-  }
 }
 
 .side-bar{
   height: 100vh;
   width: 300px;
   float: left;
-  .side_header{
+  .side__header{
     background-color: black;
     height: 100px;
     line-height: 100px;
@@ -27,12 +23,13 @@
   line-height: 80px;
   margin-left: 20px;
 }
-.header__lists{
+
+.side__icons{
   float: right;
   position: relative;
 }
 
-.list{
+.icon{
   display: inline-block;
 }
 
@@ -101,24 +98,22 @@
     float: right;
   }
 }
+  // .edit{
+  //   float:right;
+  //   position: relative;
+  // }
+
 
 .right-header{
-  color: black;
   float: right;
-  height: 40px;
-  line-height: 40px;
-  margin-top: 28px;
-  padding: 0 20px;
-  &__button{
-    height: 40px;
-    font-size: 16px;
-    padding: 0 20px 0 20px;
-    position: absolute;
-    top: 28px;
-    right: 40px;
-    border: solid 1px #38AEF0;
-    color: black;
-    margin-top: 20px;
+  position: relative;
+  left: 900px;
+  bottom: 50px;
+  background-color: green;
+  height: 50px;
+  &__edit_button{
+    position: relative;
+    top: 10px;
   }
 }
 
@@ -192,14 +187,14 @@
 //   position: relative;
 // }
 
-.form_mask{
-  box-sizing: inherit;
-  height: 15px;
-  width: 15px;
-  position: absolute;
-  top: 15px;
-  right: 10px;
-}
+// .form_mask{
+//   box-sizing: inherit;
+//   height: 100px;
+//   width: 15px;
+//   position: absolute;
+//   top: 15px;
+//   right: 10px;
+// }
 
 // .form__mask__image{
 //   height: 25px;
@@ -243,6 +238,14 @@
 //   right: 0;
 // }
 
+.insert-image{
+  color: #434A54;
+  position: relative;
+  left: 100px;
+  float: right;
+  bottom: 40px;
+}
+
 .send_btn{
   float: right;
   position: relative;
@@ -251,8 +254,8 @@
   height: 65px;
   width: 100px;
   background-color: blue;
-
 }
+
 .submit{
   display: none;
 }
@@ -267,14 +270,11 @@
 //   display:inline-block;
 // }
 
-.file_field{
-  display:none;
-}
+// .file__field{
+//   display:none;
+// }
 
-.insert-image{
-  color: #434A54;
-  position: relative;
-  left: 100px;
-  float: right;
-  bottom: 40px;
-}
+
+// .edit_btn{
+
+// }
