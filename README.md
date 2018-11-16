@@ -4,8 +4,8 @@
 |------|----|-------|
 |body|text|
 |image|string|
-|user_id|integer|null: false, t.references :user|
-|group_id|integer|null: false, t.references :group|
+|user|references|null: false, foreign_key: true|
+|group_id|references|null: false, foreign_key: true|
 
 ### Association
 - belongs_to :group
@@ -16,7 +16,7 @@
 
 |Column|Type|Options|
 |------|----|-------|
-|user_id|integer|null: false, foreign_key: true|
+|name|string|null: false,unique: true|
 
 ### Association
 - has_many :messages
@@ -24,12 +24,14 @@
 - had_many :users, through : :members
 
 
+
+
 ## usersテーブル
 
 |Column|Type|Options|
 |------|----|-------|
-|name|string|
-|e-mail|string|
+|name|string|null: false|
+|e-mail|string|null: false, unique: true|
 
 ### Association
 - has_many :members
