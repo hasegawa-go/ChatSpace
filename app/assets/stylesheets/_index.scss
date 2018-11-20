@@ -1,13 +1,14 @@
-.notification{
-  background-color: aqua;
-  width: 100%;
-  height: 28px;
-}
+// .notification{
+//   background-color: aqua;
+//   width: 100%;
+//   height: 28px;
+// }
 
 .side-bar{
   height: 100vh;
   width: 300px;
   float: left;
+  background-color: aqua;
   .side__header{
     background-color: black;
     height: 100px;
@@ -177,11 +178,11 @@
 
 
 
-.chat-main__footer__form{
+.form__message{
   width: calc(100% - 300px);
 }
 
-.insert-image{
+.form__mask__image{
   color: #434A54;
   position: relative;
   left: 100px;
@@ -189,7 +190,7 @@
   bottom: 40px;
 }
 
-.send_btn{
+.form__submit{
   float: right;
   position: relative;
   left:250px;

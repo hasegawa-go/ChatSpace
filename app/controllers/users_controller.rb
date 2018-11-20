@@ -1,5 +1,11 @@
 class UsersController < ApplicationController
 
+def index
+end
+
+  def creare
+  end
+
   def edit
   end
 
