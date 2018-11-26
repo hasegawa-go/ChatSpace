@@ -1,8 +1,5 @@
 $(document).on('turbolinks:load', function(){
-//      function buildHTML(message){
-  // $(function(){
    function buildHTML(message){
-     // var message_content = message.content ? `<p class="lower-message__content">${message.content)</p>` : "";
      var insertImage = (message.image)? '<img class="lower-message__image" src="${message.image}">' : "";
      var html =
       `<div class = "flex-message" "message_id = ${message.id}">
@@ -35,7 +32,6 @@ $('#new_message').on('submit', function(e){
        $('.message').append(html);
        $('.message').animate({scrollTop: $('.message')[0].scrollHeight}, 'fast');
        $('form')[0].reset();
-       $('.form__submit').prop('disabled', false);
      })
      .fail(function(){
         alert('error');
