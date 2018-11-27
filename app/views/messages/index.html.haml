@@ -22,25 +22,19 @@
     .header
       .left-header
         .left-header__title
-        = @group.name
+          = @group.name
         %ul.left-header__members
           %li.member
           Member：
           %li.member
           go
-        = link_to edit_group_path(@group) do
-          .right-header
-            %input.right-header__edit_button{:type => "button", :value => "EDIT"}
+
+      .right-header
+        = link_to "Edit", edit_group_path(@group), class: "right-header__edit_button edit__btn"
     .messages.js-messages
-      .messages
+      .messages{"message_id": "{message.id}"}
         = render @messages
-    / .chat-main__footer
-    /   %form.chat-main__footer__form
-    /     %input.message{:placeholder => "type a message"}
-    /     %label.upload-label{for: "insert-image"}
-    /       %span.insert-image #{ fa_icon "image"}
-    /       %input.submit{:type => "file", id: "insert-image"}
-    /     %input.send_btn{:type => "submit", :value => "SEND"  }
+      }
 
     .form
       = form_for [@group, @message] do |f|
@@ -49,4 +43,4 @@
           = f.label :image, class: 'form__mask__image' do
             = fa_icon 'picture-o', class: 'icon'
             = f.file_field :image, class: 'hidden'
-        = f.submit 'Send', class: 'form__submit'
+          = f.submit 'Send', class: 'form__submit'
