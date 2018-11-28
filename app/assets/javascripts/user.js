@@ -4,7 +4,6 @@ $(document).on('turbolinks:load', function() {
   var add_member = $("#chat-group-users");
 
   function appendUser(user) {
-    console.log("user",user)
     var html = `<div class="chat-group-user clearfix">
                   <p class="chat-group-user__name">${user.user_name}</p>
                   <a class="user-search-add chat-group-user__btn chat-group-user__btn--add" data-user-id="${user.user_id} "data-user-name="${user.user_name}">追加</a>
@@ -42,7 +41,6 @@ $(function(){
 
     .done(function(users) {
       $("#user-search-result").empty();
-      console.log("users",users)
       if (users.length !== 0 ) {
         users.forEach(function(user){
           appendUser(user);
