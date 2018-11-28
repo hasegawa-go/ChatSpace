@@ -1,9 +1,9 @@
 $(document).on('turbolinks:load', function(){
    function buildHTML(message){
      // var messageContent = message.content ? `<p class="lower-message__content">${message.content}</p>` : "";
-     var insertImage = (message.image)? `<img class="lower-message__image" src="${message.image}">` : "";
+     var insertImage = (message.image) ? `<img class="lower-message__image" src="${message.image}">` : "";
      var html =
-      `<div class = "message" "message_id = ${message.id}">
+      `<div class = "messages" "message_id = ${message.id}">
           <div class="upper-message">
             <div class="upper-message__user-name">${message.user_name}</div>
             <div class="upper-message__date">${message.date}</div>
@@ -19,6 +19,7 @@ $(document).on('turbolinks:load', function(){
 $('#new_message').on('submit', function(e){
     e.preventDefault();
     var formData = new FormData(this);
+    // for(item of formData) console.log(item);
     var url = $(this).attr('action')
     $.ajax({
       url: url,
@@ -26,11 +27,11 @@ $('#new_message').on('submit', function(e){
       data: formData,
       dataType: 'json',
       processData: false,
-      contentType: false,
+      contentType: false
     })
     .done(function(data){
       var html = buildHTML(data);
-      $('.messages').append(html);
+      $('.message').append(html);
       $('.messages').animate({scrollTop: $('.messages')[0].scrollHeight}, 'fast');
       $('#new_message')[0].reset();
       $('.form__submit').prop('disabled',false);
