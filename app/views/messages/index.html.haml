@@ -32,7 +32,7 @@
       .right-header
         = link_to "Edit", edit_group_path(@group), class: "right-header__edit_button edit__btn"
     .messages.js-messages
-      .messages{"message_id": "{message.id}"}
+      .message{"message_id": "{message.id}"}
         = render @messages
       }
 
