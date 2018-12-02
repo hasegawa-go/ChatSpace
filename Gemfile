@@ -59,6 +59,7 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
  gem 'pry-byebug'
  gem 'carrierwave'
  gem 'mini_magick'
+ gem 'fog-aws'
 
 group :production do
   gem 'unicorn'
@@ -71,3 +72,5 @@ group :development, :test do
   gem 'capistrano-rails'
   gem 'capistrano3-unicorn'
 end
+
+

@@ -2,7 +2,7 @@
   .side-bar
     .side__header
       %h3.header__name
-        go
+        = current_user.name
       %ul.side__icons
         %li.icon
           = link_to new_group_path do
@@ -17,7 +17,7 @@
             .group__name
               = group.name
             .group__message
-              メッセージはまだありません。
+              = group.show_last_message
   .chat
     .header
       .left-header
@@ -27,7 +27,8 @@
           %li.member
           Member：
           %li.member
-          go
+          - @group.users.each do |user|
+            = user.name
 
       .right-header
         = link_to "Edit", edit_group_path(@group), class: "right-header__edit_button edit__btn"
