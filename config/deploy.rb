@@ -8,7 +8,7 @@ set :default_env, {
 }
 set :linked_files, %w{ config/secrets.yml }
 
-set :application, "chat-space"
+set :application, "ChatSpace"
 set :repo_url, 'git@github.com:hasegawa-go/ChatSpace.git'
 set :linked_dirs, fetch(:linked_dirs, []).push('log', 'tmp/pids', 'tmp/cache', 'tmp/sockets', 'vendor/bundle', 'public/system', 'public/uploads')
 
